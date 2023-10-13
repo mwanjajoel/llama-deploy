@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    restart: always
+    env_file: .env
+    container_name: llama_deploy
+    command: uvicorn main:app --host 0.0.0.0
+    ports:
+      - ${PORT}:${PORT}
+    volumes:
+      - ./app:/app
+
+
+
+ 
