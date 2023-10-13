@@ -1,6 +1,8 @@
 # Llama Deploy
 This repo contains source code for deploying Llama2 via a REST API endpoint using FastAPI and Docker. 
 
+This project was created to provide foundation ground for deploying LLMs using FastAPI in production.
+
 ## How to install
 The assumption is that you have `Pipenv` installed on your computer. 
 

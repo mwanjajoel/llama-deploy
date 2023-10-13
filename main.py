@@ -14,11 +14,9 @@ llama_model = Llama(
 
 @app.get("/")
 async def root():
-    return {"message": "Welcome to Llama-land!"}
+    return {"message": "Welcome to Llama-Deploy!"}
 
 # Endpoint for accepting a user prompt
-
-
 @app.post("/prompt")
 async def prompt(prompt_data: dict):
 
