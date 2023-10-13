@@ -6,7 +6,7 @@ def get_model():
     llm_repo = os.getenv("HF_REPO")
     llm_file = os.getenv("HF_MODEL_FILE")
 
-    llm_local_path = hf_hub_download(repo_id=llm_repo, filename=llm_file)
+    llm_local_path = hf_hub_download(repo_id=llm_repo, filename=llm_file, resume_download=True)
 
     # write the llm_local_path to the .env file
     with open(".env", "a") as f:

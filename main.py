@@ -4,9 +4,9 @@ from utils.download_model import get_model
 
 app = FastAPI()
 
-model_path = get_model()
+
 llama_model = Llama(
-    model_path=model_path,
+    model_path=get_model(),
     n_threads=os.cpu_count(),
     n_batch=512,
 )
