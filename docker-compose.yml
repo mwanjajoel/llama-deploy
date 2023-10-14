@@ -6,7 +6,7 @@ services:
     restart: always
     env_file: .env
     container_name: llama_deploy
-    command: uvicorn main:app --host 0.0.0.0
+    command:  uvicorn main:app --host 0.0.0.0 --port 8000
     ports:
       - ${PORT}:${PORT}
     volumes:

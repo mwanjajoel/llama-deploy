@@ -19,6 +19,9 @@ RUN pipenv install --system --deploy
 # Copy the current directory contents into the container at /app
 COPY . /app/
 
+# Expose the port that the app runs on
+EXPOSE 8000
+
 
 # Start FastAPI app and Celery worker when the container launches
-CMD ["sh", "-c", "uvicorn main:app --host 0.0.0.0"]
+CMD ["sh", "-c", "uvicorn main:app --host 0.0.0.0 --port 8000"]
