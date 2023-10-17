@@ -13,10 +13,4 @@ def get_model():
 
     llm_local_path = hf_hub_download(repo_id=llm_repo, filename=llm_file, resume_download=True)
 
-    # write the llm_local_path to the .env file
-    with open(".env", "a") as f:
-        f.write(f"LLM_LOCAL_PATH={llm_local_path}\n")
-
-    print("the local llm path: ============>", os.getenv("LLM_LOCAL_PATH"))
-
     return llm_local_path

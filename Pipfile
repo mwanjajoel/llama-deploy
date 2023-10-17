@@ -6,9 +6,9 @@ name = "pypi"
 [packages]
 fastapi = "*"
 uvicorn = {extras = ["standard"], version = "*"}
-llama-cpp-python = "*"
 python-dotenv = "*"
 huggingface-hub = "*"
+llama-cpp-python = "*"
 
 [dev-packages]
 

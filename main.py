@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from llama_cpp import Llama
 from utils.download_model import get_model
+import os
 
 app = FastAPI()
 

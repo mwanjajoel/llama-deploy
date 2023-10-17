@@ -4,6 +4,7 @@ FROM python:3.9-slim
 # Set the working directory in the container
 WORKDIR /app
 
+
 # Install a suitable C compiler (in this case, gcc)
 RUN apt-get update && apt-get install -y build-essential
 
@@ -17,7 +18,7 @@ RUN pip install pipenv
 RUN pipenv install --system --deploy
 
 # Copy the current directory contents into the container at /app
-COPY . /app/
+COPY . /app
 
 # Expose the port that the app runs on
 EXPOSE 8000
